@@ -24,7 +24,7 @@ module.exports = [
     },
     output: {
       publicPath: "/",
-      path: "./dist",
+      path: "./dist/assets/js",
       filename: "[name].min.js"
     },
     module: {

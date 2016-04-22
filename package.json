@@ -6,7 +6,9 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "webpack --config build/webpack.build.config.js --progress --colors",
-    "start": "webpack-dev-server --config build/webpack.dev.config.js --progress --colors --inline"
+    "start": "webpack-dev-server --config build/webpack.dev.config.js --progress --colors --inline",
+    "typings": "typings install",
+    "typedoc": "typedoc --options typedoc.json --exclude '**/*.spec.ts' ./src/"
   },
   "repository": {
     "type": "git",
