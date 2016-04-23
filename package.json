@@ -2,13 +2,12 @@
   "name": "angular2-demo",
   "version": "0.0.1",
   "description": "A cms for angular2",
-  "main": "dist/app",
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "webpack --config build/webpack.build.config.js --progress --colors",
     "start": "webpack-dev-server --config build/webpack.dev.config.js --progress --colors --inline",
-    "typings": "typings install",
-    "typedoc": "typedoc --options typedoc.json --exclude '**/*.spec.ts' ./src/"
+    "typings": "typings",
+    "doc": "typedoc --options typedoc.json --exclude '**/*.spec.ts' ./src/"
   },
   "repository": {
     "type": "git",
@@ -30,12 +29,6 @@
     "npm": ">= 3"
   },
   "dependencies": {
-    "angular2": "^2.0.0-beta.15",
-    "es6-promise": "^3.1.2",
-    "es6-shim": "^0.35.0",
-    "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.2",
-    "zone.js": "^0.6.12",
     "@angular2-material/button": "^2.0.0-alpha.3",
     "@angular2-material/card": "^2.0.0-alpha.3",
     "@angular2-material/checkbox": "^2.0.0-alpha.3",
@@ -45,20 +38,29 @@
     "@angular2-material/progress-circle": "^2.0.0-alpha.3",
     "@angular2-material/radio": "^2.0.0-alpha.3",
     "@angular2-material/sidenav": "^2.0.0-alpha.3",
-    "@angular2-material/toolbar": "^2.0.0-alpha.3"
+    "@angular2-material/toolbar": "^2.0.0-alpha.3",
+    "angular2": "^2.0.0-beta.15",
+    "css-loader": "^0.23.1",
+    "es6-promise": "^3.1.2",
+    "es6-shim": "^0.35.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.2",
+    "zone.js": "^0.6.12"
   },
   "devDependencies": {
-    "webpack": "^1.13.0",
-    "webpack-dev-server": "^1.14.1",
-    "html-webpack-plugin": "^2.16.0",
+    "file-loader": "^0.8.5",
     "html-loader": "^0.4.3",
-    "ts-loader": "^0.8.2",
+    "html-webpack-plugin": "^2.16.0",
+    "style-loader": "^0.13.1",
+    "css-loader": "^0.23.1",
     "less": "^2.5.3",
     "less-loader": "^2.2.0",
-    "url-loader": "^0.5.7",
-    "file-loader": "^0.8.5",
+    "ts-loader": "^0.8.2",
     "typedoc": "^0.3.12",
     "typescript": "^1.8.10",
-    "typings": "^0.7.12"
+    "typings": "^0.7.12",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
   }
 }

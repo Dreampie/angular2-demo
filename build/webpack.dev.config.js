@@ -21,18 +21,19 @@ module.exports = [
     devtool: 'source-map',
     debug: true,
     entry: {
-      app: "./src/main"
+      main: "./src/main"
     },
     output: {
       publicPath: "/",
-      path: "./dist/assets/js",
-      filename: "[name].min.js"
+      path: "./dist",
+      filename: "assets/js/[name].min.js"
     },
     module: {
       loaders: [
-        {test: /\.less/, loader: 'style!css!less'},
+        {test: /\.css$/, loader: "style!css"},
+        {test: /\.less$/, loader: 'style!css!less'},
         {test: /\.html$/, loader: "html"},
-        {test: /\.ts/, loader: 'ts'},
+        {test: /\.tsx?$/, loader: 'ts'},
         {test: /\.(eot|svg|ttf)$/, loader: "file"},
         {test: /\.(png|jpg|gif)$/, loader: "url"},
         {test: /\.(woff|woff2)$/, loader: "url?limit=10000&minetype=application/font-woff"}
@@ -40,11 +41,11 @@ module.exports = [
     },
     resolve: {
       modulesDirectories: ['node_modules'],
-      extensions: ['', '.html', '.less', '.js', '.ts']
+      extensions: ['', '.html', '.css', '.less', '.js', '.ts', '.tsx']
     },
     plugins: [
       new webpack.BannerPlugin(banner, {raw: true}),
-      new HtmlWebpackPlugin({inject: false, template: 'src/index.html', filename: '../../index.html'}),
+      new HtmlWebpackPlugin({inject: false, template: 'src/index.html'}),
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NoErrorsPlugin()
     ]
