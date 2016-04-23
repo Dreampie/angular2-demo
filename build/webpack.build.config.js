@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const version = require("../package.json").version;
 const banner =
   "/**\n" +
-  " * angular-demo v" + version + "\n" +
+  " * angular2-demo v" + version + "\n" +
   " * https://github.com/Dreampie/angular2-demo\n" +
   " * Released under the MIT License.\n" +
   " */\n";
@@ -30,11 +30,11 @@ module.exports = [
     },
     resolve: {
       modulesDirectories: ['node_modules'],
-      extensions: ['', '.html', '.less', '.ts']
+      extensions: ['', '.html', '.less', '.js', '.ts']
     },
     plugins: [
       new webpack.BannerPlugin(banner, {raw: true}),
-      new HtmlWebpackPlugin({inject: false, template: 'src/index.html'}),
+      new HtmlWebpackPlugin({inject: false, template: 'src/index.html', filename: '../../index.html'}),
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NoErrorsPlugin()
     ]
