@@ -48,6 +48,7 @@
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
+    "raw-loader": "^0.5.1",
     "file-loader": "^0.8.5",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.16.0",
