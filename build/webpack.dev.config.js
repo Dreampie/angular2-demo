@@ -16,7 +16,7 @@ module.exports = [
       compress: true,
       historyApiFallback: true,
       inline: true,
-      port: 80
+      port: 8080
     },
     devtool: "source-map",
     debug: true,

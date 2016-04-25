@@ -1,5 +1,5 @@
-import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Component} from "angular2/core";
+import {RouteConfig, ROUTER_DIRECTIVES} from "angular2/router";
 import {HeroComponent} from "./hero/hero.component";
 import {HeroService} from "./hero/hero.service";
 
@@ -11,7 +11,7 @@ import {HeroService} from "./hero/hero.service";
   providers: [HeroService],
 })
 @RouteConfig([
-  {path: '/heroes/:id', name: 'Heroes', component: HeroComponent}
+  {path: '/heroes', name: 'Heroes', component: HeroComponent}
 ])
 export class AppComponent {
 }

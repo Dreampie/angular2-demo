@@ -14,14 +14,14 @@ export class HeroComponent implements OnInit {
   constructor(private _router:Router, private _routeParams:RouteParams, private _service:HeroService) {
   }
 
-  ngOnInit() {
-    let id = this._routeParams.get('id');
-    if (id) {
-      this._service.findById(id).then(hero => this.hero = hero);
-    } else {
-      this._service.findBy(null).then(heroes => this.heroes = heroes)
+    ngOnInit() {
+      let id = this._routeParams.get('id');
+      if (id) {
+        this._service.findById(id).then(hero => this.hero = hero);
+      } else {
+        this._service.findBy(null).then(heroes => this.heroes = heroes)
+      }
     }
-  }
 
   onSelect(hero: Hero) {
     this._router.navigate( ['Heroes', { id: hero.id }] );
